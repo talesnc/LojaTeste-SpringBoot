@@ -10,12 +10,10 @@ import com.estudo.lojatestespringboot.entities.User;
 @RestController
 @RequestMapping(value = "/users")
 public class UserResource {
-	
+
 	@GetMapping
 	public ResponseEntity<User> findAll() {
 		User u = new User(1L, "Tales", "tales@gmail.com", "999999999", "password");
-		return ResponseEntity.ok(u);
-		
+		return ResponseEntity.ok().body(u);
 	}
-
 }
